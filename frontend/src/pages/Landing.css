@@ -1,0 +1,76 @@
+.landing {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(4rem, 14vh, 6rem) 1.5rem;
+  background: linear-gradient(135deg, #1b1d35, #32264d 55%, #5b3a74);
+  color: #f6f5ff;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.landing-content {
+  max-width: 640px;
+  width: min(100%, 640px);
+  padding: 0 1rem;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 3.25rem);
+  margin-bottom: 1rem;
+  animation: slideDown 1.2s ease-out;
+}
+
+.subtitle {
+  font-size: clamp(1.125rem, 3vw, 1.35rem);
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+  color: inherit;
+  animation: fadeIn 1.8s ease-in;
+}
+
+.signup-button {
+  display: inline-block;
+  padding: 0.85rem 2.4rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.16);
+  color: inherit;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.signup-button:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 18px 30px rgba(17, 10, 35, 0.35);
+}
+
+.login-link {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: inherit;
+}
+
+.login-link a {
+  color: inherit;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.6);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

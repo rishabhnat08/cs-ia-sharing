@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: 14 17 19;
+    --surface: 20 24 27;
+    --muted: 167 176 182;
+    --text: 232 238 242;
+    --accent: 33 208 122;
+    --accent-2: 91 140 255;
+  }
+  .light {
+    --bg: 255 255 255;
+    --surface: 243 246 249;
+    --muted: 71 85 105;
+    --text: 15 23 42;
+    --accent: 120 57 205;
+    --accent-2: 156 110 255;
+  }
+
+  /* Smooth transitions for theme switching */
+  html,
+  body,
+  * {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+
+  body {
+    @apply bg-bg text-text font-sans antialiased;
+    margin: 0;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .score-badge {
+    @apply rounded-full px-3 py-1 text-xs font-medium transition-colors;
+  }
+
+  .score-badge--presence {
+    @apply bg-sky-500/20 text-sky-100;
+  }
+  .score-badge--skill {
+    @apply bg-emerald-500/20 text-emerald-100;
+  }
+  .score-badge--intent {
+    @apply bg-amber-500/20 text-amber-100;
+  }
+  .score-badge--psi {
+    @apply bg-fuchsia-500/20 text-fuchsia-100;
+  }
+
+  .light .score-badge--presence {
+    @apply bg-sky-100 text-sky-700;
+  }
+  .light .score-badge--skill {
+    @apply bg-emerald-100 text-emerald-700;
+  }
+  .light .score-badge--intent {
+    @apply bg-amber-100 text-amber-700;
+  }
+  .light .score-badge--psi {
+    @apply bg-fuchsia-100 text-fuchsia-700;
+  }
+
+  .report-surface {
+    @apply border border-white/10 bg-bg/60;
+  }
+
+  .light .report-surface {
+    @apply border-slate-200 bg-white shadow-sm;
+  }
+
+  .nav-link {
+    @apply rounded-md px-3 py-1 transition-colors;
+  }
+
+  .nav-link--inactive {
+    @apply text-muted hover:bg-white/5;
+  }
+
+  .nav-link--active {
+    @apply bg-white/10 text-text;
+  }
+
+  .light .nav-link--inactive {
+    @apply text-muted hover:bg-slate-200/80;
+  }
+
+  .light .nav-link--active {
+    @apply bg-slate-200 text-slate-900 shadow-sm;
+  }
+
+  .student-card {
+    @apply rounded-md px-3 py-2 text-left text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-accent;
+  }
+
+  .student-card__name {
+    @apply font-semibold;
+  }
+
+  .student-card__level {
+    @apply text-xs;
+  }
+
+  .student-card--inactive {
+    @apply bg-transparent text-text hover:bg-white/5;
+  }
+
+  .student-card--inactive .student-card__level {
+    @apply text-muted;
+  }
+
+  .student-card--active {
+    @apply bg-accent text-bg shadow;
+  }
+
+  .student-card--active .student-card__level {
+    @apply text-slate-900/80;
+  }
+
+  .light .student-card--inactive {
+    @apply hover:bg-slate-200/60;
+  }
+
+  .light .student-card--inactive .student-card__level {
+    @apply text-muted;
+  }
+
+  .light .student-card--active {
+    @apply bg-accent text-white;
+  }
+
+  .light .student-card--active .student-card__level {
+    @apply text-white/80;
+  }
+
+  /* Fix calendar icon for date inputs */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
+  .light input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0);
+    opacity: 0.5;
+  }
+
+  /* Page transition animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .page-transition {
+    animation: fadeIn 0.3s ease-in;
+  }
+
+  /* Highlight flash animation for newly submitted report */
+  @keyframes highlightFlash {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(33, 208, 122, 0);
+    }
+    50% {
+      box-shadow: 0 0 20px 5px rgba(33, 208, 122, 0.5);
+    }
+  }
+
+  .light .highlight-flash {
+    animation: highlightFlash 1s ease-in-out 2;
+  }
+
+  .highlight-flash {
+    animation: highlightFlash 1s ease-in-out 2;
+  }
+}

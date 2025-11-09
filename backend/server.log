@@ -1,0 +1,425 @@
+INFO:     Will watch for changes in these directories: ['/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [96765] using StatReload
+/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:373: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+INFO:     Started server process [96768]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:65390 - "OPTIONS /send-verification HTTP/1.1" 200 OK
+[EMAIL] Successfully sent verification code to rishrish0706@gmail.com
+INFO:     127.0.0.1:65390 - "POST /send-verification HTTP/1.1" 200 OK
+[EMAIL] Successfully sent verification code to rishrish0706@gmail.com
+INFO:     127.0.0.1:65393 - "POST /send-verification HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65413 - "OPTIONS /verify-code HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65413 - "POST /verify-code HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65415 - "OPTIONS /signup HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65416 - "POST /signup HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65416 - "GET /players HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65416 - "GET /players HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65429 - "OPTIONS /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65429 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65429 - "GET /players HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65429 - "GET /players HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65481 - "GET /players HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65481 - "GET /players HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65481 - "GET /player/1/history HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65499 - "GET /players HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65499 - "GET /players HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65512 - "GET /players HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65512 - "GET /players HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65512 - "GET /player/1/history HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65513 - "GET /players HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65513 - "GET /players HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65534 - "GET /players HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49643 - "GET /players HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49644 - "GET /player/2/history HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/engine/default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: evaluations
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 78, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 75, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 302, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 215, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/concurrency.py", line 38, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/main.py", line 136, in player_history
+    .all()
+     ~~~^^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/orm/query.py", line 2704, in all
+    return self._iter().all()  # type: ignore
+           ~~~~~~~~~~^^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+        params,
+        ^^^^^^^
+        execution_options={"_sa_orm_load_options": self.load_options},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+    ...<4 lines>...
+        _add_event=_add_event,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...<4 lines>...
+        conn,
+        ^^^^^
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+        statement, params or {}, execution_options=execution_options
+    )
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/sql/elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/engine/default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: evaluations
+[SQL: SELECT evaluations.id AS evaluations_id, evaluations.player_id AS evaluations_player_id, evaluations.session_id AS evaluations_session_id, evaluations.date AS evaluations_date, evaluations.front_court AS evaluations_front_court, evaluations.back_court AS evaluations_back_court, evaluations.attacking_play AS evaluations_attacking_play, evaluations.defensive_play AS evaluations_defensive_play, evaluations.strokeplay AS evaluations_strokeplay, evaluations.footwork AS evaluations_footwork, evaluations.presence AS evaluations_presence, evaluations.intent AS evaluations_intent, evaluations.improvements AS evaluations_improvements, evaluations.strengths AS evaluations_strengths, evaluations.comments AS evaluations_comments, evaluations.pressure_score AS evaluations_pressure_score, evaluations.skill_score AS evaluations_skill_score, evaluations.intent_score AS evaluations_intent_score, evaluations.psi_score AS evaluations_psi_score, evaluations.ai_feedback AS evaluations_ai_feedback, evaluations.ai_report_json AS evaluations_ai_report_json 
+FROM evaluations 
+WHERE evaluations.player_id = ? ORDER BY evaluations.date DESC]
+[parameters: (2,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+INFO:     127.0.0.1:49643 - "GET /players HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49643 - "GET /player/1/history HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/engine/default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: evaluations
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 78, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/routing.py", line 75, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 302, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/fastapi/routing.py", line 215, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/starlette/concurrency.py", line 38, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/main.py", line 136, in player_history
+    .all()
+     ~~~^^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/orm/query.py", line 2704, in all
+    return self._iter().all()  # type: ignore
+           ~~~~~~~~~~^^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+        params,
+        ^^^^^^^
+        execution_options={"_sa_orm_load_options": self.load_options},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+    ...<4 lines>...
+        _add_event=_add_event,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...<4 lines>...
+        conn,
+        ^^^^^
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+        statement, params or {}, execution_options=execution_options
+    )
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/sql/elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/sqlalchemy/engine/default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: evaluations
+[SQL: SELECT evaluations.id AS evaluations_id, evaluations.player_id AS evaluations_player_id, evaluations.session_id AS evaluations_session_id, evaluations.date AS evaluations_date, evaluations.front_court AS evaluations_front_court, evaluations.back_court AS evaluations_back_court, evaluations.attacking_play AS evaluations_attacking_play, evaluations.defensive_play AS evaluations_defensive_play, evaluations.strokeplay AS evaluations_strokeplay, evaluations.footwork AS evaluations_footwork, evaluations.presence AS evaluations_presence, evaluations.intent AS evaluations_intent, evaluations.improvements AS evaluations_improvements, evaluations.strengths AS evaluations_strengths, evaluations.comments AS evaluations_comments, evaluations.pressure_score AS evaluations_pressure_score, evaluations.skill_score AS evaluations_skill_score, evaluations.intent_score AS evaluations_intent_score, evaluations.psi_score AS evaluations_psi_score, evaluations.ai_feedback AS evaluations_ai_feedback, evaluations.ai_report_json AS evaluations_ai_report_json 
+FROM evaluations 
+WHERE evaluations.player_id = ? ORDER BY evaluations.date DESC]
+[parameters: (1,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+INFO:     127.0.0.1:49645 - "GET /player/2/history HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'models.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [96768]
+/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:373: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+INFO:     Started server process [99053]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [99053]
+/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:373: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+INFO:     Started server process [99112]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [99112]
+/Users/Rishabh/Desktop/CS-IA/badminton-ai-project/backend/venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:373: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+INFO:     Started server process [263]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
